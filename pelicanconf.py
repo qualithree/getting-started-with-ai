@@ -1,6 +1,6 @@
 AUTHOR = 'QualiThree'
-SITENAME = 'Getting Started With Dev'
-SITEURL = ''
+SITENAME = 'Getting Started With AI'
+SITEURL = 'ai.gettingstartedwith.dev'
 
 PATH = 'content'
 
