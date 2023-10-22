@@ -1,1 +1,4 @@
-# getting-started-with-ai
+running the server:
+```shell
+pelican -r -l
+```
