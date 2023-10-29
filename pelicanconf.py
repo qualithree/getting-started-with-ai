@@ -1,6 +1,6 @@
 AUTHOR = 'QualiThree'
 SITENAME = 'Getting Started With AI'
-SITEURL = ''
+SITEURL = '' # When clicking the title
 
 PATH = 'content'
 
@@ -42,7 +42,7 @@ JINJA_ENVIRONMENT = {
 THEME = 'theme/bootstrap-next/'
 
 PYGMENTS_STYLE = 'monokai'
-BOOTSTRAP_FLUID = True
+BOOTSTRAP_FLUID = False
 
 # FAVICON = 'images/favicon.png'
 # SITELOGO = 'images/my_site_logo.png'
@@ -51,8 +51,15 @@ BOOTSTRAP_FLUID = True
 # BANNER_SUBTITLE = 'This is my subtitle'
 # BANNER_ALL_PAGES = True
 
+BOOTSTRAP_THEME = 'lux'  # https://bootswatch.com/4/
+
 HIDE_SITENAME = False
-DISPLAY_BREADCRUMBS = True
+HIDE_SIDEBAR = True
+DISPLAY_BREADCRUMBS = False
 DISPLAY_CATEGORY_IN_BREADCRUMBS = True
 BOOTSTRAP_NAVBAR_INVERSE = False
 DISPLAY_ARTICLE_INFO_ON_INDEX = False
+DISPLAY_PAGES_ON_MENU = False
+DISPLAY_CATEGORIES_ON_MENU = False
+
+CUSTOM_CSS = 'static/custom.css'

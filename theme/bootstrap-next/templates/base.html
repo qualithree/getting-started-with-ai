@@ -101,9 +101,9 @@
     {% endif %}
 
 </head>
-<body>
 
-<nav class="navbar navbar-expand-md {% if BOOTSTRAP_NAVBAR_INVERSE %}navbar-inverse bg-inverse{% else %}navbar-light bg-faded{% endif %} fixed-top" role="navigation">
+<body>
+<nav class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %} navbar navbar-expand-md {% if BOOTSTRAP_NAVBAR_INVERSE %}navbar-inverse bg-inverse{% else %}navbar-light bg-faded{% endif %} fixed-top" role="navigation">
     {% if MENUITEMS or (pages and DISPLAY_PAGES_ON_MENU) or (categories and DISPLAY_CATEGORIES_ON_MENU) %}
     <button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target=".navbar-main-collapse" aria-label="Toggle navigation">
         <i class="icon-menu"></i>
@@ -112,7 +112,7 @@
     {% if SITELOGO or not HIDE_SITENAME %}
     <a href="{{ SITEURL }}/" class="navbar-brand">
         {% if SITELOGO %}<img class="img-fluid float-left gap-right" src="{{ SITEURL }}/{{ SITELOGO }}" width="{{ SITELOGO_SIZE }}"/> {% endif %}
-        {% if not HIDE_SITENAME %}{{ SITENAME }}{% endif %}
+        {% if not HIDE_SITENAME %}<h1>{{ SITENAME }}</h1>{% endif %}
     </a>
     {% endif %}
     <div class="collapse navbar-collapse navbar-main-collapse">
@@ -154,7 +154,13 @@
         </ul>
     </div>
     <!-- /.navbar-collapse -->
+    {% include "includes/nav.html" %}
 </nav> <!-- /.navbar -->
+
+<div class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
+    {% include "includes/base_description.html" %}
+</div>
+
 <!-- Banner -->
 {% if BANNER and BANNER_ALL_PAGES %}
     {% include 'includes/banner.html' %}
