@@ -15,7 +15,7 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-DIRECT_TEMPLATES = ('index', 'blog')
+DIRECT_TEMPLATES = ('index', 'blog', 'topics')
 
 PAGE_URL = 'topics/{slug}/'
 PAGE_SAVE_AS = 'topics/{slug}/index.html'
