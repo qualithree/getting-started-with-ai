@@ -1,7 +1,18 @@
-{% extends "article_list.html" %}
+{% extends "base.html" %}
 
 {% block canonical_rel %}<link rel="canonical" href="{{ SITEURL }}">{% endblock %}
 
+{% block meta_header %}
+<meta name="description" content="Getting Started with AI: A Guide for Novices and Experts to Explore the Realm of Artificial Intelligence">
+{% endblock %}
+
 {% block banner %}
 	{% include 'includes/banner.html' %}
+{% endblock %}
+
+{% block content %}
+    <div class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
+        {% include "includes/base_description.html" %}
+    </div>
+
 {% endblock %}

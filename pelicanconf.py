@@ -1,6 +1,6 @@
 AUTHOR = 'QualiThree'
 SITENAME = 'Getting Started With AI'
-SITEURL = '' # When clicking the title
+SITEURL = ''  # When clicking the title
 
 PATH = 'content'
 
@@ -14,6 +14,14 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+
+DIRECT_TEMPLATES = ('index', 'blog')
+
+PAGE_URL = 'topics/{slug}/'
+PAGE_SAVE_AS = 'topics/{slug}/index.html'
+ARTICLE_SAVE_AS = 'blog/{slug}.html'
+ARTICLE_URL = 'blog/{slug}'
+SITEMAP_SAVE_AS = 'sitemap.xml'
 
 LINKS = (
     ('CreateCoders', 'https://createcoders.com/'),
